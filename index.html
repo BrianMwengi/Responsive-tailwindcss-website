@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tailwind CSS Website</title>
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="output.css">
+</head>
+
+    <nav class="flex items-center justify-between flex-wrap bg-black p-3 fixed w-full z-10 top-0 pin-t">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+            <span class="text-2xl pl-2 font-semibold">Logo</span></a>
+        </div>
+
+        <div class="block lg:hidden">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>    
+          </button>
+
+        </div>
+        
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-6">
+                <a class="inline-block py-2 px-2 text-white no-underline hover:text-blue-300" href="#">Home</a>
+            </li>
+          <li class="mr-6">
+            <a class="inline-block py-2 px-2 text-white no-underline hover:text-blue-300" href="#">About</a>
+          </li>
+          <li class="mr-6">
+            <a class="inline-block py-2 px-2 text-white no-underline hover:text-blue-300" href="#">Services</a>
+          </li>
+          <li class="mr-6">
+            <a class="inline-block py-2 px-2 text-white no-underline hover:text-blue-300" href="#">Contact</a>
+          </li>
+          <li class="mr-6">
+            <a class="inline-block py-2 px-2 text-white no-underline hover:text-blue-300" href="#">Login</a>
+          </li>
+          <li class="mr-6">
+            <a class="inline-block py-2 px-2 text-white no-underline hover:text-blue-300" href="#">Register</a>
+          </li>
+        </ul>
+    </div>
+      </nav>
+
+    <body class="bg-white font-sans leading-normal tracking-normal">
+      <h1 class="text-2xl text-center font-semibold pt-20">Trending Posts</h1>
+      <div class="grid gap-6 md:grid-cols-3 justify-items-center px-6 py-4">
+      <div class="max-w-xs rounded overflow-hidden shadow-lg my-2">
+        <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p class="text-grey-darker text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">#photography</span>
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">#travel</span>
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">#winter</span>
+        </div>
+      </div>
+
+      <div class="max-w-xs rounded overflow-hidden shadow-lg my-2">
+        <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p class="text-grey-darker text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">#photography</span>
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">#travel</span>
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">#winter</span>
+        </div>
+      </div>
+
+      <div class="max-w-xs rounded overflow-hidden shadow-lg my-2">
+        <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <p class="text-grey-darker text-base">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">#photography</span>
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">#travel</span>
+          <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">#winter</span>
+        </div>
+      </div>
+
+  </div>
+
+    <script>
+        document.getElementById('nav-toggle').onclick = function(){
+          document.getElementById("nav-content").classList.toggle("hidden")
+        }
+    </script>
+    
+</body>
+</html>
